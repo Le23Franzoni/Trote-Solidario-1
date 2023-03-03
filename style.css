@@ -35,16 +35,31 @@ body * {
 }
 
 #container {
-    border: 1px solid red;
     width: 100%;
     max-width: 1444px;
     margin: 24px auto;
     padding: 0 25px;
 }
 
+#equipes p { 
+    margin: 8px auto;
+}
+
+#equipes table{
+    border-spacing: 0px;
+    table-layout: fixed;
+    margin: 0 auto; 
+    text-align: center;
+}
+#equipes th {
+    border: 1px solid var(--stroke-color);
+}
+#equipes  td {
+    border: 1px solid var(--stroke-color);
+}
+
 #profile {
     width: fit-content;
-    border: 1px solid red;
     margin: 0 auto;
     text-align: center;
 }
