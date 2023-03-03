@@ -53,6 +53,33 @@ body * {
     width: 112px;
 }
 
+#content {
+    margin: 24px auto;
+    padding: 0 4px;
+    text-align: justify;
+}
+
+#content p{
+    margin: 8px auto;
+}
+
+#content ul{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 8px auto;
+}
+
+#content ul ul{
+    margin: 8px 16px;
+}
+
+#content a {
+    display: flex;
+    justify-content: center;
+    gap: 16px;  
+}
+
 #switch {
     position: relative;
     width: 64px;
@@ -96,33 +123,6 @@ body * {
     -ms-backdrop-filter: blur(4px);
     -o-backdrop-filter: blur(4px);
     border-radius: 9999px;
-}
-
-#content {
-    margin: 24px auto;
-    padding: 0 4px;
-    text-align: justify;
-}
-
-#content p{
-    margin: 8px auto;
-}
-
-#content ul{
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    margin: 8px auto;
-}
-
-#content ul ul{
-    margin: 8px 16px;
-}
-
-#content a {
-    display: flex;
-    justify-content: center;
-    gap: 16px;  
 }
 
 #social-links {
