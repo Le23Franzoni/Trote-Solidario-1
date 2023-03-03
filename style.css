@@ -54,6 +54,7 @@ body * {
 #equipes th {
     border: 1px solid var(--stroke-color);
 }
+
 #equipes  td {
     border: 1px solid var(--stroke-color);
 }
