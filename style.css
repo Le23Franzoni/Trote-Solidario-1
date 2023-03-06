@@ -26,7 +26,7 @@
 
 body{
     background: var(--bg-url) no-repeat top center/cover;
-    height: 100vh;
+    height: 132vh;
 }
 
 body * {
@@ -48,17 +48,40 @@ body * {
 #equipes table{
     border-spacing: 0px;
     table-layout: fixed;
-    margin: 0 auto; 
+    margin: 0 auto 20px; 
     text-align: center;
 }
 #equipes th {
-    border: 1px solid var(--stroke-color);
+    border: 3px solid var(--stroke-color);
+    padding: 4px;
 }
 
 #equipes  td {
     border: 1px solid var(--stroke-color);
+    padding: 5px;
+}
+#regras h1#header {
+    gap: 5px;
+    padding: 20px;
+    border: 1px;
 }
 
+#regras p#desc1 {
+    margin-bottom: 8px;
+}
+#regras ul {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#regras ul li {
+    display: table-row;
+    margin-left: 10px;
+
+}
+#regras p#saibamais {
+    padding-top: 10px;
+    padding-bottom: 100px;
+}
 #profile {
     width: fit-content;
     margin: 0 auto;
