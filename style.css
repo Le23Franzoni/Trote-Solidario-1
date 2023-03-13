@@ -60,6 +60,7 @@ body * {
     margin: 0 auto 20px; 
     text-align: center;
 }
+
 #equipes th {
     border: 3px solid var(--stroke-color);
     padding: 4px;
@@ -69,6 +70,7 @@ body * {
     border: 1px solid var(--stroke-color);
     padding: 5px;
 }
+
 #regras h1#header {
     gap: 5px;
     padding: 20px;
