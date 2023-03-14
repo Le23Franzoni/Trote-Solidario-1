@@ -6,7 +6,7 @@
 
 :root {
     --text-color: white;
-    --bg-url: linear-gradient(rgb(0, 0, 100), rgb(0, 0, 150), rgba(0, 0, 200));
+    --bg-url: radial-gradient( rgba(43, 0, 50), rgb(0, 0, 50), rgb(0, 0, 100));
     --stroke-color: rgba(255, 255, 255, 0.5);
     --surface-color: rgba(255, 255, 255, 0.1);
     --surface-color-hover: rgba(255, 255, 255, 0.05);
@@ -37,96 +37,62 @@ body * {
     color: var(--text-color);
 }
 
-#container {
-    width: 100vw;
-}
-
-#container h1 {
-    display: flex;
-    justify-content: center;
-
-    padding: 12px;
+#menu {
+    width: 200px;
+    height: 100vh;
 
     border: 1px solid var(--stroke-color);
 }
 
-#equipes p { 
-    margin: 8px auto;
-}
-
-#equipes table{
-    border-spacing: 0px;
-    table-layout: fixed;
-    margin: 0 auto 20px; 
-    text-align: center;
-}
-
-#equipes th {
-    border: 3px solid var(--stroke-color);
-    padding: 4px;
-}
-
-#equipes  td {
-    border: 1px solid var(--stroke-color);
-    padding: 5px;
-}
-
-#regras h1#header {
-    gap: 5px;
-    padding: 20px;
-    border: 1px;
-}
-
-#regras p#desc1 {
-    margin-bottom: 8px;
-}
-#regras ul {
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-#regras ul li {
-    display: table-row;
-    margin-left: 10px;
-
-}
-#regras p#saibamais {
-    padding-top: 10px;
-    padding-bottom: 100px;
-}
 #profile {
     display: flex;
     flex-direction: column;
     text-align: center;
+
+    padding: 8px;
 }
 
 #profile img {
     width: 112px;
 }
 
-#content {
-    padding: 0 16px 0 8px;
-    text-align: justify;
+#profile p {
+    padding-bottom: 8px;
+    font-weight: 500;
+    font-size: 18px;
 }
 
-#content p{
-    margin: 8px auto;
-}
-
-#content ul{
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    margin: 16px;
-}
-
-#content ul ul{
-    margin: 8px 24px;
-}
-
-#content a {
-    display: flex;
+#links ul{
+    list-style: none;
     justify-content: center;
-    gap: 16px;  
+}
+
+#links ul li {
+    border: 1px solid var(--stroke-color);
+}
+
+#links ul li a{
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+
+    padding: 16px;
+
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    -moz-backdrop-filter: blur(4px);
+    -ms-backdrop-filter: blur(4px);
+    -o-backdrop-filter: blur(4px);
+
+    text-decoration: none;
+    font-weight: 500;
+
+    transition: background 0.2s;
+}
+
+#links ul li a:hover {
+    background: var(--surface-color-hover);
+    border: 1.5px solid var(--text-color);
 }
 
 #switch {
@@ -203,60 +169,100 @@ footer {
     font-size: 14px;
 }
 
-@media (min-width: 700px){
-    #menu {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 200px;
-        height: 100vh;
+#container {
+    width: 100vw;
+}
 
-        border: 1px solid var(--stroke-color);
-    }
-    
-    #profile {
-        padding: 8px;
-    }
+#content {
+    padding: 0 16px 0 8px;
+    text-align: justify;
+}
 
-    #profile p {
-        padding-bottom: 8px;
-        font-weight: 500;
-        font-size: 18px;
-    }
-    
-    #links ul{
-        list-style: none;
-        justify-content: center;
-    }
+#content p{
+    margin: 8px auto;
+}
 
-    #links ul li {
-        border: 1px solid var(--stroke-color);
-    }
-    
-    #links ul li a{
-        display: flex;
-        gap: 16px;
-        justify-content: center;
+#content ul{
+    margin: 8px 24px;
+}
 
-        padding: 16px;
+#content ul li {
+    margin: 4px;
+}
 
-        backdrop-filter: blur(4px);
-        -webkit-backdrop-filter: blur(4px);
-        -moz-backdrop-filter: blur(4px);
-        -ms-backdrop-filter: blur(4px);
-        -o-backdrop-filter: blur(4px);
-    
-        text-decoration: none;
-        font-weight: 500;
-    
-        transition: background 0.2s;
+#content a {
+    display: flex;
+    justify-content: center;
+    gap: 16px;  
+}
+
+#video iframe{
+    width: 1040px;
+    height: 540px;
+    display: flex;
+    justify-content: center;
+    margin:8px auto;
+}
+
+#equipes p { 
+    margin: 8px auto;
+}
+
+#equipes table{
+    border-spacing: 0px;
+    table-layout: fixed;
+    margin: 0 auto 20px; 
+    text-align: center;
+}
+
+#equipes th {
+    border: 3px solid var(--stroke-color);
+    padding: 4px;
+}
+
+#equipes  td {
+    border: 1px solid var(--stroke-color);
+    padding: 5px;
+}
+
+#regras h1#header {
+    gap: 5px;
+    padding: 20px;
+    border: 1px;
+}
+
+#regras p#desc1 {
+    margin-bottom: 8px;
+}
+
+#regras ul {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#regras ul li {
+    display: table-row;
+    margin-left: 10px;
+
+}
+
+#regras p#saibamais {
+    padding-top: 10px;
+    padding-bottom: 100px;
+}
+
+@media(max-width: 768px){
+    /* Modo Tablet */
+    #profile{
+        background: purple;
     }
-    
-    #links ul li a:hover {
-        background: var(--surface-color-hover);
-        border: 1.5px solid var(--text-color);
+}
+
+@media(max-width:   360px){
+    /* Modo mobile */
+    #profile{
+     background: red;   
     }
-    
 }
 
 @keyframes slide-in {
