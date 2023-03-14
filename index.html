@@ -18,13 +18,14 @@
 <header id="header">
     <a href="./index.html"><img src="./assets/trote-fundo-branco.png" alt="Logo do Trote Solidário 2023 com escritas em branco"></a>
     <p>@troteunifacef</p>
+    <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="">Menu
+        <span id="hamburguer"></span>
+    </button>  
     <div id="switch" onclick="toggleMode()">
         <button></button>
         <span></span>
     </div>
-    <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="">Menu
-        <span id="hamburguer"></span>
-    </button>   
+    
     <nav id="nav">
             <ul id= "menu" role="menu">
                 <li>
@@ -42,21 +43,19 @@
                 <li>
                     <a href="#">Integração</a>
                 </li>
+            
+                <div id="social-links">
+                    <a href="https://www.unifacef.com.br" target="_blank">
+                        <ion-icon name="earth-outline"></ion-icon>
+                    </a>
+                    <a href="https://www.youtube.com/watch?v=r92bsr2fReI" target="_blank">
+                        <ion-icon name="logo-youtube"></ion-icon>
+                    </a>
+                    <a href="https://www.instagram.com/unifacef/" target="_blank">
+                        <ion-icon name="logo-instagram"></ion-icon>
+                    </a>
+                </div>
             </ul>
-        <div id="social-links">
-            <a href="https://www.unifacef.com.br" target="_blank">
-                <ion-icon name="earth-outline"></ion-icon>
-            </a>
-            <a href="https://www.youtube.com/watch?v=r92bsr2fReI" target="_blank">
-                <ion-icon name="logo-youtube"></ion-icon>
-            </a>
-            <a href="https://www.instagram.com/unifacef/" target="_blank">
-                <ion-icon name="logo-instagram"></ion-icon>
-            </a>
-        </div>
-        <footer>
-            Feito pelos alunos de <strong>Ciência da Computação e Sistemas da Informação <br>2023</strong>
-        </footer>
     </nav>
 </header>         
         
@@ -86,8 +85,12 @@
                 <div id="video">
                     <iframe src="https://www.youtube.com/embed/r92bsr2fReI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
+                <footer>
+                    Feito pelos alunos de <strong>Ciência da Computação e Sistemas da Informação<br>2023</strong>
+                </footer>
             </div>
         </div>
+        
 </div>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

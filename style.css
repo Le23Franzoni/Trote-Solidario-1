@@ -26,7 +26,7 @@
 
 body{
     background: var(--bg-url) no-repeat top center/cover;
-    height: 100vh;
+    height: 100%;
 }
 
 body * {
@@ -156,15 +156,16 @@ body * {
 }
 
 footer {
-    width: auto;
-    padding: 8px 0 0 8px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
     font-size: 14px;
 }
 
 #container {
     display: inline;
-    border: 1px solid red;
     width: calc(100vw - 12.5rem);
+    height: 100vh;
     position: absolute;
     top: 0;
     left: 12.5rem;
@@ -250,6 +251,25 @@ footer {
 
 @media(max-width: 600px){
     /* Modo mobile */
+    #header {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: fit-content;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem;
+    
+        border: 1px solid var(--stroke-color);
+    
+        font-weight: 500;
+        font-size: 18px;
+    }
+    
+    #header img {
+        width: 80px;
+    }
+
     #menu{
         display: block;
         width: 100%;
@@ -314,6 +334,17 @@ footer {
     #nav.active #hamburguer::before {
         transform: rotate(-135deg);
         top: -7px;
+    }
+    #container {
+        display: block;
+        width: 100%;
+        position: relative;
+        left: 0;
+    }
+
+    #video iframe{
+        width: calc(600px/2);
+        height:calc(450px/2);
     }
 }
 
