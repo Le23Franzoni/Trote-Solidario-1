@@ -42,6 +42,8 @@ body * {
     align-items: center;
     padding: 0.5rem;
 
+    border: 1.5px solid var(--stroke-color);
+
     font-weight: 500;
     font-size: 18px;
 }
@@ -109,13 +111,13 @@ body * {
 }
 
 #menu li {
-    border: 1.5px solid var(--text-color);
+    border: 1.5px solid var(--stroke-color);
 }
 
 #menu a{
     display: flex;
-    gap: 16px;
     justify-content: center;
+    gap: 16px;
 
     padding: .5rem;
 
@@ -159,51 +161,54 @@ body * {
     background: var(--highlight-color);
 }
 
-footer {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    font-size: 14px;
-}
-
-#container {
-    display: inline;
-    width: calc(100vw - 12.5rem);
-    height: 100vh;
+#article {
     position: absolute;
     top: 0;
     left: 12.5rem;
-}
 
-#content {
+    width: calc(100vw - 12.5rem);
+    height: fit-content;
+
     padding: 0 16px 0 8px;
     text-align: justify;
 }
 
-#content p{
+#article p{
     margin: 8px auto;
 }
 
-#content ul{
+#article ul{
     margin: 8px 24px;
 }
 
-#content ul li {
+#article ul li {
     margin: 4px;
 }
 
-#content a {
+#article a {
     display: flex;
     justify-content: center;
     gap: 16px;  
 }
 
-#video iframe{
+#article iframe{
     width: 1040px;
     height: 540px;
-    display: flex;
-    justify-content: center;
+    position: relative;
+    left: calc(25vw - 12.5rem - 8px);
+    top: 0;
     margin:8px auto;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: calc(50vw - 12.5rem);
+    font-size: 14px;
+}
+
+footer p {
+    text-align: center;
 }
 
 #equipes p { 
@@ -348,16 +353,22 @@ footer {
         top: -7px;
     }
     
-    #container {
+    #article {
         display: block;
         width: 100%;
         position: relative;
         left: 0;
     }
 
-    #video iframe{
+    #article iframe{
         width: calc(600px/2);
         height:calc(450px/2);
+        left: 10vw;
+    }
+
+    #footer {
+        left: 0;
+        bottom: 0;
     }
 }
 
