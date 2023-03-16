@@ -11,6 +11,7 @@
     --surface-color-hover: rgba(255, 255, 255, 0.05);
     --highlight-color: rgba(255, 255, 255, 0.2);
     --switch-bg-url: url(./assets/moon-stars.svg);
+    --th-color: black;
 }
 
 .light {
@@ -19,6 +20,7 @@
     --boder-color: black;
     --surface-color-hover: rgba(0, 0, 0, 0.02);
     --switch-bg-url: url(./assets/sun.svg);
+    --th-color: white;
 }
 
 body {
@@ -100,7 +102,7 @@ body * {
 #menu {
     display: flex;
     list-style: none;
-    margin: 0 25rem;
+    margin: 0 20rem;
 
 }
 
@@ -136,31 +138,6 @@ body * {
 #menu a:hover {
     background: var(--surface-color-hover);
     border: 1.5px solid var(--article-color);
-}
-
-#social-links {
-    display: flex;
-    justify-content: center;
-    gap: 16px;
-
-    padding: 8px;
-
-    font-size: 24px;
-}
-
-#social-links a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    transition: background 0.2s;
-    border-radius: 50%;
-
-    color: var(--color-header-footer);
-}
-
-#social-links a:hover {
-    background: var(--highlight-color);
 }
 
 #article {
@@ -217,20 +194,50 @@ body * {
     color: var(--color-header-footer);
 }
 
-#equipes p {
-    margin: 8px auto;
+#social-links {
+    display: flex;
+    justify-self: end;
+    gap: 16px;
+
+    padding: 8px;
+
+    font-size: 24px;
+}
+
+#social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: background 0.2s;
+    border-radius: 50%;
+
+    color: var(--color-header-footer);
+}
+
+#social-links a:hover {
+    background: var(--highlight-color);
+}
+
+#equipes {
+    color: var(--article-color);
 }
 
 #equipes table {
+    width: max-content;
+    margin: 0 auto 20px;
+
     border-spacing: 0px;
     table-layout: fixed;
-    margin: 0 auto 20px;
     text-align: center;
+    background-color: var(--bg-url);
 }
 
 #equipes th {
+    background-color: var(--article-color);
     border: 3px solid var(--boder-color);
     padding: 4px;
+    color: var(--th-color);
 }
 
 #equipes td {
@@ -238,10 +245,15 @@ body * {
     padding: 5px;
 }
 
+#regras {
+    color: var(--article-color);
+}
+
 #regras h1#header {
+    color: var(--color-header-footer);
     gap: 5px;
     padding: 20px;
-    border: 1px;
+    border: 1px solid var(--boder-color);
 }
 
 #regras p#desc1 {
@@ -354,6 +366,10 @@ body * {
     #article iframe {
         width: calc(600px/2);
         height: calc(450px/2);
+    }
+
+    #equipes table {
+        width: 100vw;
     }
 }
 
