@@ -17,7 +17,7 @@
 
 .light{
     --text-color: black;
-    --bg-url: linear-gradient(rgb(0, 220, 250), rgba(0, 220, 250, 0.5));
+    --bg-url: #ffffff;
     --stroke-color: rgba(0, 0, 0, 0.5);
     --surface-color: rgba(0, 0, 0, 0.05);
     --surface-color-hover: rgba(0, 0, 0, 0.02);
@@ -32,21 +32,20 @@ body{
 
 body * {
     font-family: 'Josefin Sans', sans-serif;
-    color: var(--text-color);
 }
 
 #header {
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-        height: fit-content;
-        align-items: center;
-        padding: 0.5rem;
-        background-color: var(--bg-header);
-        border: 1px solid var(--stroke-color);
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: fit-content;
+    align-items: center;
+    
+    background-color: var(--bg-header);
+    border: 1px solid var(--stroke-color);
 
-        font-size: 40px;
-    }
+    font-size: 30px;
+}
 
 #header img {
     width: 112px;
@@ -87,8 +86,9 @@ body * {
     display: block;
     width: 64px;
     height: 24px;
+    
     background: var(--surface-color);
-    border: 1px solid var(--stroke-color);
+    border: 1px solid white;
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     -moz-backdrop-filter: blur(4px);
@@ -105,19 +105,18 @@ body * {
     display: flex;
     flex-direction: row;
     list-style: none;
-    gap: .5rem;
-    margin-top: .5rem;
     justify-content: space-between;
 }
 
 #menu li {
     border-right: 2px solid var(--stroke-color);
+    border-left: 2px solid var(--stroke-color);
+    padding: 0 auto;
 }
 
 #menu a{
     display: flex;
     justify-content: center;
-    gap: 16px;
     border-radius: 8px;
 
     padding: .5rem;
@@ -130,6 +129,7 @@ body * {
 
     text-decoration: none;
     font-weight: 500;
+    color: white;
 
     transition: background 0.2s;
 }
@@ -156,6 +156,8 @@ body * {
 
     transition: background 0.2s;
     border-radius: 50%;
+
+    color: white;
 }
 
 #social-links a:hover{
@@ -168,6 +170,8 @@ body * {
 
     padding: 0 16px 0 8px;
     text-align: justify;
+
+    color: var(--text-color);
 }
 
 #article p{
@@ -185,18 +189,20 @@ body * {
 #article a {
     display: flex;
     justify-content: center;
-    gap: 16px;  
+    gap: 16px; 
+    color: var(--text-color); 
 }
 
 #article iframe{
     display: flex;
     width: 1040px;
     height: 540px;
-    justify-content: center;
-    margin: 5rem auto 5rem auto;
+    margin: 1.5rem auto 1.5rem auto;
 }
 
 #footer {
+    margin-left: 1rem;
+    margin-right: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -208,6 +214,7 @@ body * {
 
     text-align: center;
     font-size: 14px;
+    color: white;
 }
 
 #equipes p { 
@@ -259,6 +266,10 @@ body * {
 
 @media(max-width: 600px){
     /* Modo mobile */
+
+    *{
+        margin: 0;
+    }
     #header {
         display: flex;
         flex-direction: row;
@@ -275,7 +286,7 @@ body * {
     }
     
     #header img {
-        width: 80px;
+        width: 70px;
     }
 
     #menu{
@@ -284,7 +295,9 @@ body * {
         height: 0px;
 
         position: absolute;
+        top: 70px;
         right: 0;
+
         background: var(--bg-url);
         z-index: 1000;
         transition: .6s;
@@ -293,23 +306,23 @@ body * {
     }
 
     #nav.active #menu {
-        margin-top: 45px;
-        height: 100%;
+        margin-top: 25px;
+        height: calc(100vh - 70px);
+
         visibility: visible;
         overflow-y: auto;
-        border: 1px solid var(--stroke-color);
+    }
+
+    #menu li {
+        border: none;
     }
 
     #menu a {
         padding: 1rem 0;
         margin: 0 1rem;
-        border-bottom: 2px solid 2px solid var(--stroke-color);
         
-        backdrop-filter: blur(0px);
-        -webkit-backdrop-filter: blur(0px);
-        -moz-backdrop-filter: blur(0px);
-        -ms-backdrop-filter: blur(0px);
-        -o-backdrop-filter: blur(0px);
+        border-bottom: 2px solid white;
+        border-radius: 0;
     }
 
     #btn-mobile {
@@ -320,10 +333,11 @@ body * {
         background: none;
         cursor: pointer;
         gap: .5rem;
+
+        color: white;
     }
 
     #hamburguer {
-        color: var(--text-color);
         display: block;
         border-top: 2px solid;
         width: 20px;
@@ -335,7 +349,9 @@ body * {
         width: 20px;
         height: 2px;
         margin-top: 5px;
+
         background: currentColor;
+        transition: .3s;
         position: relative;
     }
     
@@ -343,11 +359,11 @@ body * {
         border-top-color: transparent;
     }
 
-    #nav.active #hamburguer::after #hamburguer::before {
+    #nav.active #hamburguer::before {
         transform: rotate(135deg);
     }
     
-    #nav.active #hamburguer::before {
+    #nav.active #hamburguer::after {
         transform: rotate(-135deg);
         top: -7px;
     }
@@ -363,14 +379,6 @@ body * {
         width: calc(600px/2);
         height:calc(450px/2);
         left: 10vw;
-    }
-
-    #footer {
-        width: 100%;
-        position: relative;
-        left: 0;
-        bottom: 0;
-        border: 1px solid var(--stroke-color);
     }
 }
 
