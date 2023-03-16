@@ -6,7 +6,8 @@
 
 :root {
     --text-color: white;
-    --bg-url: radial-gradient( rgba(43, 0, 50), rgb(0, 0, 50), rgb(0, 0, 100));
+    --bg-url: #0d1117;
+    --bg-header: #161b22;
     --stroke-color: rgba(255, 255, 255, 0.5);
     --surface-color: rgba(255, 255, 255, 0.1);
     --surface-color-hover: rgba(255, 255, 255, 0.05);
@@ -35,17 +36,17 @@ body * {
 }
 
 #header {
-    display: flex;
-    flex-direction: column;
-    width: 200px;
-    align-items: center;
-    padding: 0.5rem;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: fit-content;
+        align-items: center;
+        padding: 0.5rem;
+        background-color: var(--bg-header);
+        border: 1px solid var(--stroke-color);
 
-    border: 1.5px solid var(--stroke-color);
-
-    font-weight: 500;
-    font-size: 18px;
-}
+        font-size: 40px;
+    }
 
 #header img {
     width: 112px;
@@ -101,20 +102,23 @@ body * {
 }
 
 #menu {
+    display: flex;
+    flex-direction: row;
     list-style: none;
     gap: .5rem;
-
     margin-top: .5rem;
+    justify-content: space-between;
 }
 
 #menu li {
-    border: 1.5px solid var(--stroke-color);
+    border-right: 2px solid var(--stroke-color);
 }
 
 #menu a{
     display: flex;
     justify-content: center;
     gap: 16px;
+    border-radius: 8px;
 
     padding: .5rem;
 
@@ -159,16 +163,11 @@ body * {
 }
 
 #article {
-    position: relative;
-    top: calc(-391px);
-    left: 12.46rem;
-    width: calc(100% - 12.5rem);
+    width: 100%;
     height: fit-content;
 
     padding: 0 16px 0 8px;
     text-align: justify;
-
-    border: 1px solid var(--stroke-color);
 }
 
 #article p{
@@ -190,23 +189,25 @@ body * {
 }
 
 #article iframe{
+    display: flex;
     width: 1040px;
     height: 540px;
-    position: relative;
-    left: calc(25vw - 12.5rem - 8px);
-    top: 0;
-    margin:8px auto;
+    justify-content: center;
+    margin: 5rem auto 5rem auto;
 }
 
 #footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
     height: fit-content;
-    border: 1px solid var(--stroke-color);
+
+    background-color: var(--bg-header);
+    border-top: 1px solid var(--stroke-color);
+
     text-align: center;
     font-size: 14px;
-}
-
-#footer p {
-    text-align: center;
 }
 
 #equipes p { 
