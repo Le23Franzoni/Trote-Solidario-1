@@ -20,7 +20,7 @@
     --boder-color: black;
     --surface-color-hover: rgba(0, 0, 0, 0.02);
     --switch-bg-url: url(./assets/sun.svg);
-    --th-color: white;
+    --th-color: white;  
 }
 
 body {
@@ -177,6 +177,7 @@ body * {
 }
 
 #footer {
+    clear: both;
     margin-left: 1rem;
     margin-right: 1rem;
     padding: 0 1rem;
@@ -245,35 +246,167 @@ body * {
     padding: 5px;
 }
 
-#regras {
+#alimentos {
     color: var(--article-color);
 }
 
-#regras h1#header {
+#alimentos h1#headeralimentos {
     color: var(--color-header-footer);
-    gap: 5px;
+    border: transparent;
+    margin: 0;
     padding: 20px;
-    border: 1px solid var(--boder-color);
 }
 
-#regras p#desc1 {
+#content1 {
+    margin-left: 20px;
+}
+
+#alimentos-btn {
+    background-color: #0d1117;
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease-in-out;
+}
+  
+#alimentos-btn:hover {
+    background-color: #30363d;
+}
+
+#alimentos p#desc1 {
     margin-bottom: 8px;
 }
 
-#regras ul {
+#alimentos ul {
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
-#regras ul li {
+#alimentos ul li {
     display: table-row;
     margin-left: 10px;
 
 }
 
-#regras p#saibamais {
-    padding-top: 10px;
-    padding-bottom: 100px;
+#saibamais {
+    margin-top: 200px;
+    padding: 20px;
+}
+
+#regrasimg {  /* Essa imagem é temporária e eu espero que alguem tenha alguma imagem mais relacionada ao trote solidário para colocar aqui */
+    float: right;
+    margin-top: 30px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    margin-left: 20px;
+    width: 400px;
+    height: 600px;
+}
+
+#pontuacao {
+    color: var(--article-color);
+}
+
+#pontuacao #header2 {
+    color: var(--color-header-footer);
+    margin: 0;
+    padding: 20px;
+}
+
+#content2 {
+    margin-left: 20px;
+}
+
+#pontuacao-btn {
+    background-color: #0d1117;
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease-in-out;
+}
+  
+#pontuacao-btn:hover {
+    background-color: #30363d;
+}
+
+#sangue {
+    color: var(--article-color);
+}
+
+#sangue #header3 {
+    color: var(--color-header-footer);
+    margin: 0;
+    padding: 20px;
+}
+
+#content3 {
+    margin-left: 20px;
+}
+
+#sangue-btn {
+    background-color: #0d1117;
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease-in-out;
+}
+  
+#sangue-btn:hover {
+    background-color: #30363d;
+}
+
+#calculadora {
+    color: var(--article-color)
+}
+
+#calculadora #header4 {
+    color: var(--color-header-footer);
+    margin: 0;
+    padding: 20px;
+}
+
+#content4 {
+    margin-left: 20px;
+}
+
+#calculadora-btn {
+    background-color: #0d1117;
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#calculadora-btn:hover {
+    background-color: #30363d;
 }
 
 @media(max-width: 600px) {
