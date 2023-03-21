@@ -300,6 +300,10 @@ body * {
     padding: 20px;
 }
 
+#saibamais a{
+    color: var(--article-color);
+}
+
 #regrasimg {  /* Essa imagem é temporária e eu espero que alguem tenha alguma imagem mais relacionada ao trote solidário para colocar aqui */
     float: right;
     margin-top: 30px;
