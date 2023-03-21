@@ -23,3 +23,11 @@ headerBtn3.addEventListener('click', () => {
   headerBtn3.setAttribute('aria-expanded', !expanded);
   content3.hidden = expanded;
 });
+const headerBtn4 = document.querySelector('#calculadora-btn');
+const content4 = document.querySelector('#content4');
+
+headerBtn4.addEventListener('click', () => {
+  const expanded = headerBtn4.getAttribute('aria-expanded') === 'true' || false;
+  headerBtn4.setAttribute('aria-expanded', !expanded);
+  content4.hidden = expanded;
+});

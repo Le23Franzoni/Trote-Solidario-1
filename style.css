@@ -390,6 +390,17 @@ body * {
     margin-left: 20px;
 }
 
+#content4 ul li {
+    padding-bottom: 16px;
+}
+ 
+#content4 input {
+    width: auto;
+    height: 25px;
+    border-color: var(--boder-color);
+    border-radius: 8px;
+}
+
 #calculadora-btn {
     background-color: #0d1117;
     border: none;
@@ -407,6 +418,10 @@ body * {
 
 #calculadora-btn:hover {
     background-color: #30363d;
+}
+
+#saibamais {
+    color: var(--article-color);
 }
 
 @media(max-width: 600px) {
