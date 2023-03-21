@@ -424,7 +424,22 @@ body * {
     background-color: #30363d;
 }
 
-#saibamais {
+#sobrenos {
+    padding: 0 16px 0 8px;
+    text-align: justify;
+
+    color: var(--article-color);
+}
+
+#sobrenos h1 {
+    font-size: 30px;
+}
+
+#sobrenos li {
+    font-size: 20px;
+    padding-bottom: 8px;
+}
+#sobrenos a{
     color: var(--article-color);
 }
 
